@@ -7,16 +7,14 @@ import java.util.List;
 public class Beam {
     public double beamLength;
     public double referencePosition;
-    public double intensity;
     public List<SupportType> support;
-    public List<Loads> loads;
+    public List<Load> loads;
 
-    public Beam(double beamLength, List<Loads> loads, List<SupportType> support, double referencePosition, double intensity) {
+    public Beam(double beamLength, List<Load> loads, List<SupportType> support, double referencePosition) {
         this.beamLength = beamLength;
         this.loads = loads;
         this.support = support;
         this.referencePosition = referencePosition;
-        this.intensity = intensity;
     }
 
     public double getBeamLength() {
@@ -27,11 +25,11 @@ public class Beam {
         this.beamLength = beamLength;
     }
 
-    public List<Loads> getLoads() {
+    public List<Load> getLoads() {
         return loads;
     }
 
-    public void setLoads(List<Loads> loads) {
+    public void setLoads(List<Load> loads) {
         this.loads = loads;
     }
 
@@ -41,14 +39,6 @@ public class Beam {
 
     public void setSupport(List<SupportType> support) {
         this.support = support;
-    }
-
-    public double getIntensity() {
-        return intensity;
-    }
-
-    public void setIntensity(double intensity) {
-        this.intensity = intensity;
     }
 
     public double getReferencePosition() {
